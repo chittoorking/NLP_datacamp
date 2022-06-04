@@ -1,0 +1,29 @@
+You'll apply these regex library methods to the same Monty Python text from the nltk corpora.
+
+You have both scene_one and sentences available from the last exercise; now you can use them with re.search() and re.match() to extract and match more text.
+
+Instructions 1/3
+Use re.search() to search for the first occurrence of the word "coconuts" in scene_one. Store the result in match.
+Print the start and end indexes of match using its .start() and .end() methods, respectively.
+# Import necessary modules
+from nltk.tokenize import sent_tokenize 
+from nltk.tokenize import word_tokenize 
+
+# Split scene_one into sentences: sentences
+sentences = sent_tokenize(scene_one)
+
+# Use word_tokenize to tokenize the fourth sentence: tokenized_sent
+tokenized_sent = word_tokenize(sentences[3])
+
+# Make a set of unique tokens in the entire scene: unique_tokens
+unique_tokens = set(word_tokenize(scene_one))
+
+# Print the unique tokens result
+print(unique_tokens)
+
+# Search for the first occurrence of "coconuts" in scene_one: match
+match = re.search("coconuts", scene_one)
+
+# Print the start and end indexes of match
+print(match.start(),match.end())
+580 588
