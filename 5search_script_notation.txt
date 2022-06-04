@@ -1,0 +1,8 @@
+Create a pattern to match the script notation (e.g. Character:), assigning the result to pattern2. 
+Remember that you will want to match any words or spaces that precede the : (such as the space within SOLDIER #1:).
+Use re.match() with your new pattern to find and print the script notation in the fourth line. The tokenized sentences are available in your namespace as sentences
+
+# Find the script notation at the beginning of the fourth sentence and print it
+pattern2 = r"[A-Z]+:"
+print(re.match(pattern2, sentences[3]))
+<_sre.SRE_Match object; span=(0, 7), match='ARTHUR:'>
