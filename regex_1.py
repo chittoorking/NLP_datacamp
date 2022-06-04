@@ -7,6 +7,8 @@
 #Write a pattern called spaces to match one or more spaces ("\s+") and then use re.split() to split my_string on this pattern, keeping all punctuation intact. Print the result.
 #Find all digits in my_string by writing a pattern called digits ("\d+") and using re.findall(). Print the result.
 # Write a pattern to match sentence endings: sentence_endings
+my_string="Let's write RegEx!  Won't that be fun?  I sure think so.  Can you find 4 sentences?  Or perhaps, all 19 words?"
+
 sentence_endings = r"[.?!]"
 
 # Split my_string on sentence endings and print the result
