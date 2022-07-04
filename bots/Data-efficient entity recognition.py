@@ -1,3 +1,6 @@
+# Most systems for extracting entities from text are built to extract 'Universal' things like names, dates, and places. But you probably don't have enough training data for your bot to make these systems perform well!
+
+# In this exercise, you'll activate the MITIE entity recognizer inside Rasa to extract restaurants-related entities using a very small amount of training data. A dictionary args has already been defined for you, along with a training_data object.
 # Import necessary modules
 from rasa_nlu.config import RasaNLUConfig
 from rasa_nlu.model import Trainer
