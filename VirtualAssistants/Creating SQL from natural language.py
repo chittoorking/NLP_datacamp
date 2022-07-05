@@ -1,3 +1,7 @@
+responses=["I'm sorry :( I couldn't find anything like that",
+ '{} is a great hotel!',
+ '{} or {} would work!',
+ '{} is one option, but I know others too :)']
 # Define respond()
 def respond(message):
     # Extract the entities
