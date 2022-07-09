@@ -1,4 +1,5 @@
 # Load the 'de_core_news_sm' model – spaCy is already imported
+#german model
 nlp = spacy.load('de_core_news_sm')
 
 text = "Als erstes Unternehmen der Börsengeschichte hat Apple einen Marktwert von einer Billion US-Dollar erreicht"
