@@ -9,7 +9,7 @@ for ent in doc.ents:
     print(ent.text, ent.label_)
 
 # Get the span for "iPhone X"
-iphone_x = doc[1]
+iphone_x = doc[1:3]
 
 # Print the span text
 print('Missing entity:', iphone_x.text)
