@@ -2,7 +2,7 @@
 doc = nlp("After making the iOS update you won't notice a radical system-wide redesign: nothing like the aesthetic upheaval we got with iOS 7. Most of iOS 11's furniture remains the same as in iOS 10. But you will discover some tweaks once you delve a little deeper.")
 
 # Write a pattern for full iOS versions ("iOS 7", "iOS 11", "iOS 10")
-pattern = [{'TEXT': iOS}, {'IS_DIGIT': True}]
+pattern = [{'TEXT': "iOS"}, {'IS_DIGIT': True}]
 
 # Add the pattern to the matcher and apply the matcher to the doc
 matcher.add('IOS_VERSION_PATTERN', None, pattern)
