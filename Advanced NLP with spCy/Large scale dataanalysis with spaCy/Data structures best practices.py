@@ -11,3 +11,16 @@ for index, pos in enumerate(pos_tags):
         # Check if the next token is a verb
         if pos_tags[index + 1] == 'VERB':
             print('Found a verb after a proper noun!')
+
+#It only uses lists of strings instead of native token attributes. This is often less efficient, and can't express complex relationships.
+
+# Rewrite the code to use the native token attributes instead of a list of pos_tags.
+# Loop over each token in the doc and check the token.pos_ attribute.
+# Use doc[token.i + 1] to check for the next token and its .pos_ attribute.
+
+for token in doc:
+    # Check if the current token is a proper noun
+    if token.pos_ == 'PROPN':
+        # Check if the next token is a verb
+        if doc[token.i+1].pos_ == 'VERB':
+            print('Found a verb after a proper noun!')
