@@ -1,3 +1,6 @@
+#The similarities are not always this conclusive. Once you're getting serious about developing NLP applications that leverage semantic similarity, 
+#you might want to train vectors on your own data, or tweak the similarity algorithm.
+
 doc1 = nlp("It's a warm summer day")
 doc2 = nlp("It's sunny outside")
 
