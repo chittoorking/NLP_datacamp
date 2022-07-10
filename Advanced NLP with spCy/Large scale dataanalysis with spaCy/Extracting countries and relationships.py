@@ -22,3 +22,43 @@ for match_id, start, end in matcher(doc):
 
 # Print the entities in the document
 print([(ent.text, ent.label_) for ent in doc.ents if ent.label_ == 'GPE'])
+
+
+# Update the script and get the matched span's root head token.
+# Print the text of the head token and the span.
+# Create a doc and find matches in it
+doc = nlp(text)
+
+# Iterate over the matches
+for match_id, start, end in matcher(doc):
+    # Create a Span with the label for "GPE" and overwrite the doc.ents
+    span = Span(doc, start, end, label='GPE')
+    doc.ents = list(doc.ents) + [span]
+    
+    # Get the span's root head token
+    span_root_head = span.root.head
+    # Print the text of the span root's head token and the span text
+    print(span_root_head.text, '-->', span.text)
+    
+# Namibia --> Namibia
+# South --> South Africa
+# Cambodia --> Cambodia
+# Kuwait --> Kuwait
+# Somalia --> Somalia
+# Haiti --> Haiti
+# Mozambique --> Mozambique
+# Somalia --> Somalia
+# Rwanda --> Rwanda
+# Singapore --> Singapore
+# Sierra --> Sierra Leone
+# Afghanistan --> Afghanistan
+# Iraq --> Iraq
+# Sudan --> Sudan
+# Congo --> Congo
+# Haiti --> Haiti
+    
+    
+    
+    
+    
+    
