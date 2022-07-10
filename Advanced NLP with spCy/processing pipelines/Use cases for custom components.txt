@@ -1,0 +1,7 @@
+Custom components are great for adding custom values to documents, tokens and spans, and customizing the doc.ents.
+
+Which of these problems can be solved by custom pipeline components? Choose all that apply!
+
+
+computing your own values based on tokens and their attributes
+adding named entities, for example based on a dictionary
