@@ -18,7 +18,7 @@ doc = nlp("This was a great restaurant. Afterwards, we went to a really nice bar
 
 # Create spans for "great restaurant" and "really nice bar"
 span1 = doc[3:5]
-span2 = doc[-4:-1]
+span2 = doc[-4:-1:1]
 
 # Get the similarity of the spans
 similarity = span1.similarity(span2)
