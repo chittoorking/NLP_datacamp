@@ -17,16 +17,20 @@ Doc.set_extension('author',default=None)
 Doc.set_extension('book',default=None)
 
 
-
 # Import the Doc class and register the extensions 'author' and 'book'
 from spacy.tokens import Doc
 Doc.set_extension('book', default=None)
 Doc.set_extension('author', default=None)
 
-for doc, ____ in ____(____, ____):
+for doc, context in nlp.pipe(DATA, as_tuples=True):
     # Set the doc._.book and doc._.author attributes from the context
-    doc._.book = ____
-    doc._.author = ____
+    doc._.book = context['book']
+    doc._.author = context['author']
     
     # Print the text and custom attribute data
     print(doc.text, '\n', "— '{}' by {}".format(doc._.book, doc._.author), '\n')
+
+    
+    
+#The same technique is useful for a variety of tasks. For example, you could pass in page or paragraph numbers to relate the processed Doc back to the position in a larger document.
+# Or you could pass in other structured data like IDs referring to a knowledge base.
