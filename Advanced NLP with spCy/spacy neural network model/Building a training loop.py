@@ -1,3 +1,8 @@
+# Let's write a simple training loop from scratch!
+
+# The pipeline you've created in the previous exercise is available as the nlp object. It already contains the entity recognizer with the added label 'GADGET'.
+
+# The small set of labelled examples that you've created previously is available as the global variable TRAINING_DATA. To see the examples, you can print them in your script or in the IPython shell. spacy and random have already been imported for you.
 # Start the training
 nlp.begin_training()
 
