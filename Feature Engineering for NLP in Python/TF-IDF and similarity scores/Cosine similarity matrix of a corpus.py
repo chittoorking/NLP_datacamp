@@ -14,7 +14,7 @@ tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(corpus)
 
 # Compute and print the cosine similarity matrix
-cosine_sim = cosine_similarity(tfidf_matrix)
+cosine_sim = cosine_similarity(tfidf_matrix,tfidf_matrix)
 print(cosine_sim)
 
 # [[1.         0.36413198 0.18314713 0.18435251 0.16336438]
